@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.container h1 {
+    font-size: 45px;
+    color: bisque;
+}
+.flex-items > ul{
+    display: flex;
+}
+.flex-items > ul > li{
+    list-style: none;
+    padding-left: 30px;
+}
+.flex-items > ul > li a{
+    text-decoration: none;
+    font-size: 30px;
+}
+.flex-items > ul > li a:hover{
+    color: white;
+}
+
+.flex-items ul li ul li {
+    display: none;
+    background-color: bisque;
+    padding: 20px;
+}
+.flex-items ul li ul li a{
+    padding: 10px;
+}
+.flex-items ul li ul li a:hover{
+    color: white;
+}
+.flex-items ul li:hover ul li{
+    display: block;
+    transition: 10s;
+}
+
