@@ -1,46 +1,139 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-.container{
-    background-color: aqua;
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --color1: #fff;
+    --color2: #181818;
+}
+.nav-bar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 40px;
-}
-.container h1 {
-    font-size: 45px;
-    color: bisque;
-}
-.flex-items > ul{
-    display: flex;
-}
-.flex-items > ul > li{
+    align-items: center;
     list-style: none;
-    padding-left: 30px;
-}
-.flex-items > ul > li a{
-    text-decoration: none;
-    font-size: 30px;
-}
-.flex-items > ul > li a:hover{
-    color: white;
-}
-
-.flex-items ul li ul li {
-    display: none;
-    background-color: bisque;
+    position: relative;
+    background-color: var(--color2);
     padding: 20px;
 }
-.flex-items ul li ul li a{
-    padding: 10px;
-}
-.flex-items ul li ul li a:hover{
+.nav-bar h1 {
     color: white;
+    font-size: 30px;
 }
-.flex-items ul li:hover ul li{
-    display: block;
-    transition: 10s;
+.menu {
+    display: flex;
+}
+.menu li {
+    padding-left: 30px;
+}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a:hover:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.open-menu, .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {
+    display: none;
 }
 
+/* Initially hide the sub-menu */
+.sub-menu {
+    background-color: aqua;
+    border-radius: 10px;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-menu li {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.sub-menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: none;
+}
+
+.sub-menu li a:hover:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+
+/* Show the sub-menu when the "Services" menu item is hovered */
+.nav-bar li:hover .sub-menu {
+    display: block;
+}
+
+
+
+@media (max-width: 610px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {
+        margin-top: 40px;
+    }
+    .menu li a {
+        padding: 10px;
+    }
+    .open-menu, .close-menu {
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}

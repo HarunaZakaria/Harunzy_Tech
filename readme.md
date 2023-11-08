@@ -4,6 +4,16 @@ This is the readme file for the HarunzyTech. It provides an overview of the proj
 
 Hrunzy Tech is Web base company that is focus on providing it customers with all kinds of Web services to ensure that their business are running successful.
 
+provide professional software solutions for companies, small scale business, and individuals
+# colors
+#FF9A52
+#FF6243
+#F02832
+#398283
+
+
+
+
 
 1. Web Design and Development: This can include creating custom websites, responsive design, and user-friendly interfaces.
 2. E-commerce Solutions: If you plan to sell products online, you can offer services related to setting up online stores, payment gateways, and shopping cart integration.

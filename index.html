@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>Harunzy Tech</title>
+    <title>HarunzyTech</title>
 </head>
 <body>
-    <div class="container">
-        <div>
-            <h1>HarunzyTech</h1>
-        </div>
-        <div class="flex-items">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a>
-                    <ul>
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <h1>HarunzyTech</h1>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a>
+            <!-- Nested sub-list under "Services" -->
+                        <ul class="sub-menu">
                         <li><a href="#">E-commerce Solutions</a></li>
                         <li><a href="#">Search Engine Optimization (SEO)</a></li>
                         <li><a href="#">Web Design and Development</a></li>
                         <li><a href="#">UI/UX Design</a></li>
                         <li><a href="#">Graphic Design</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Blog</a></li>
+                        </ul>
+                        </li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <label for="chech" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="chech" class="open-menu"><i class="fas fa-bars"></i></label>
+
             </ul>
-        </div>
-    </div>
+        </nav>
+    </header>
+     <script src="index.js"></script>
 </body>
 </html>
