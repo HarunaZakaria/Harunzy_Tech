@@ -4,9 +4,10 @@
     margin: 0;
 }
 body {
+    background-color: #ecc6ab;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --color1: #fff;
-    --color2: #181818;
+    --color2: #FF9A52;
 }
 .nav-bar {
     width: 100%;
@@ -31,6 +32,7 @@ body {
 .menu li a {
     display: inline-block;
     text-decoration: none;
+    font-size: 20px;
     color: var(--color1);
     text-align: center;
     transition: 0.15s ease-in-out;
@@ -43,7 +45,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: 3px;
     background-color: var(--color1);
     transition: 0.15s ease-in-out;
 }
@@ -69,12 +71,12 @@ body {
 
 /* Initially hide the sub-menu */
 .sub-menu {
-    background-color: aqua;
+    background-color: #ecc6ab;
     border-radius: 10px;
     display: none;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 .sub-menu li {
@@ -85,7 +87,8 @@ body {
 .sub-menu li a {
     display: inline-block;
     text-decoration: none;
-    color: var(--color1);
+    color: white;
+    font-size: large;
     text-align: center;
     transition: 0.15s ease-in-out;
     position: relative;
@@ -98,8 +101,8 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1px;
-    background-color: var(--color1);
+    height: 3px;
+    background-color: var(--color2);
     transition: 0.15s ease-in-out;
 }
 
