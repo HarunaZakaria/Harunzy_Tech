@@ -127,9 +127,6 @@ body {
         background-color: var(--color2);
         transition: all 0.2s ease-in-out;
     }
-    .menu li {
-        margin-top: 40px;
-    }
     .menu li a {
         padding: 10px;
     }
@@ -138,5 +135,52 @@ body {
     }
     #check:checked ~ .menu {
         right: 0;
+    }
+}
+/* this is the style for the image slider*/
+.slide-wrapper {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+    
+}
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.slider img {
+    animation: slide 16s infinite;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    width: 100%;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    55% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    80% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-300%);
     }
 }
